@@ -129,7 +129,7 @@ namespace Parcial2_CarmonaSantiago.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { ticket.Id });
             }
             return View(ticket);
         }
