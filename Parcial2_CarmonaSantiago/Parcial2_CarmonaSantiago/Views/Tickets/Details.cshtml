@@ -1,15 +1,21 @@
 ﻿@model Parcial2_CarmonaSantiago.DAL.Entities.Ticket
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalle";
 }
 
-<h1>Details</h1>
+<h1>Detalle</h1>
 
 <div>
-    <h4>Ticket</h4>
+    <h4>Boleto</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.UseDate)
         </dt>
@@ -31,6 +37,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+    <a class="btn btn-outline-success" asp-action="Index">Volver a la lista</a>
 </div>

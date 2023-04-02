@@ -115,6 +115,8 @@ namespace Parcial2_CarmonaSantiago.Controllers
             {
                 try
                 {
+                    ticket.UseDate = DateTime.Now;
+                    ticket.IsUsed = true;
                     _context.Update(ticket);
                     await _context.SaveChangesAsync();
                 }
