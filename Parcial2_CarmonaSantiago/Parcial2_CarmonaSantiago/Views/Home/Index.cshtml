@@ -3,6 +3,18 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenido a la Boletería de la Bichota</h1>
+    <h1 class="display-4" style="margin-top: 50px;">Bienvenido a la Boletería de <b>La Bichota</b></h1>
+    <br />
     <p>En este aplicativo podrás validar las boletas para el concierto de La Bichota</p>
+    <h2 style="margin-top: 50px;">¿Qué deseas hacer?</h2>
+    <div style="display:inline-flex; margin-top: 50px;">
+        <div style="padding-right: 20px;">
+            <h3>Consultar un boleto</h3>
+            <a class="btn btn-outline-info" asp-controller="Tickets" asp-action="Consultation">Consultar</a>
+        </div>
+        <div>
+            <h3>Ver lista de boletos</h3>
+            <a class="btn btn-outline-info" asp-controller="Tickets" asp-action="Index">Ver lista</a>
+        </div>
+    </div>
 </div>
